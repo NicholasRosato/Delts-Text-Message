@@ -1,3 +1,4 @@
+#Notes: You must manually clean excel sheet, format numbers to XXXXXXXXXX, remove dublicates, make sure to test before sending texts, make sure all rows are correct.
 from twilio.rest import Client
 
 import csv
@@ -47,15 +48,15 @@ for nameNumber in names:
     print('Rushee Number: '+ numbers[rowCount])
     rowCount = rowCount + 1
 
-account_sid = 'AC06ee8497e60e7c95aa69e9ab5f6dba38'
-auth_token = '78f5cc1d659fe2b234f312abfc64652c'
+account_sid = #<get this from Twilio account>
+auth_token = #<get this from Twilio account>
 client = Client(account_sid, auth_token)
 nameCount = 0
 for number in numbers:
     message = client.messages \
                     .create(
-                            body="Hey " + names[nameCount] + ", there is a rush event at delts from 6PM-8PM tonight. We are having room talks. If you want a ride you can call Logan - 7348122512 or Andrew - 8123600690. Address - 400 Northwestern Ave.",
-                         from_='+16146666520',
+                            body="Hey " + names[nameCount] + ", there is a rush event at delts from 6PM-8PM tonight. Address - 400 Northwestern Ave.",
+                         from_= #<Get this from twilio>,
                          to =number
                      )
     nameCount = nameCount + 1
