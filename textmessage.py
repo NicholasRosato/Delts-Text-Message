@@ -3,6 +3,7 @@ from twilio.rest import Client
 import csv
 
 #https://www.youtube.com/watch?v=knxlmCVFAZI THis is documentation on how to get quick started
+#Quick start website: https://www.twilio.com/docs/libraries/python
 
 filename = "rush_responses.csv"
 # initializing the titles and rows list
