@@ -1,7 +1,8 @@
 #Notes: You must manually clean excel sheet, format numbers to XXXXXXXXXX, remove dublicates, make sure to test before sending texts, make sure all rows are correct.
 from twilio.rest import Client
-
 import csv
+
+#https://www.youtube.com/watch?v=knxlmCVFAZI THis is documentation on how to get quick started
 
 filename = "rush_responses.csv"
 # initializing the titles and rows list
